@@ -1,0 +1,29 @@
+stream.of()
+make a stream of data
+stream.generate()
+generate a random stream data
+stream.filter()
+filter the stream with some condition
+stream.map()
+return one data to another using function'
+stream.sorted()
+return a sorted version data
+stream.collect()
+return the stream data into collection
+stream.match()
+return a boolean whether it match the data
+stream.count()
+return the number of elements
+stream.return()
+return an optional with the reduced value
+stream.distinct()
+return a distincted stream
+
+There are following types of method references in java:
+
+Reference to a static method.
+ContainingClass::staticMethodName
+Reference to an instance method.
+containingObject::instanceMethodName
+Reference to a constructor.
+ClassName::new
