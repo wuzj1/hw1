@@ -1,0 +1,19 @@
+Lock
+    Instead of using implicit locking via the synchronized keyword the Concurrency API supports various explicit locks
+    specified by the Lock interface. Locks support various methods for finer grained lock control thus are more expressive
+    than implicit monitors.
+
+ReentrantLock
+    ReentrantLock allows threads to enter into the lock on a resource more than once.
+    When the thread first enters into the lock, a hold count is set to one.
+    Before unlocking the thread can re-enter into lock again and every time hold count is incremented by one.
+    For every unlock requests, hold count is decremented by one and when hold count is 0, the resource is unlocked.
+
+Completeablefuture vs future
+
+CompletableFuture<T> class implements Future<T> interface in Java. CompletableFuture can be used as a Future that
+has explicitly completed. The Future interface doesn’t provide a lot of features, we need to get the result of
+asynchronous computation using the get() method, which is blocked, so there is no scope to run multiple dependent
+tasks in a non-blocking fashion whereas CompleteFuture class can provide the functionality to chain multiple
+dependent tasks that run asynchronously, so we can create a chain of tasks where the next task is triggered
+when the result of the current task is available.
