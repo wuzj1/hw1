@@ -1,0 +1,18 @@
+memcached vs redis
+both store data in memory, nosql and open source
+but memcached can only store the data as string, redis can store it as different data type like list, hash
+redis supports replica while memcached not.
+redis supports clustering while memcached not.
+redis supports native persistence while memcached not.
+
+view vs stored procedure:
+A view represents a virtual table.
+You can join multiple tables in a view and use the view to present the data as if the data were coming
+from a single table.
+
+A stored procedure uses parameters to do a function... whether it is updating and inserting data, or
+ returning single values or data sets.
+
+view vs materialized view
+View can be defined as a virtual table created as a result of the query expression. However,
+ Materialized View is a physical copy, picture or snapshot of the base table.
