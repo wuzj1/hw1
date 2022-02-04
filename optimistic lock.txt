@@ -1,0 +1,13 @@
+Optimistic lock vs pessimistic lock
+Optimistic lock assumes everything optimistically, so it only lock the record when changes are committed. If multiple want to update the same record, they will be informed one conflict  exists. Pessimistic lock wants to make sure everything is not conflicted, so it will lock the record while it is updating.
+
+How to solve deadlock?
+Banker algorithm
+Make sure the lock request is less than or equal to the max need and less than or equal to the free resource.
+
+
+Saga pattern
+Saga use a sequence of local transaction. If one of the transaction fails, it will run compensate transaction that can reverse the transaction.
+Two ways of implement:
+Choreography— each local transaction publish domain events to trigger local transaction.
+Orchestration— central to tell the local transaction to execute.
